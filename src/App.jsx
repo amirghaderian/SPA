@@ -1,5 +1,5 @@
-import { About, Home } from "./pages";
-import { Routes, Route, Link } from "react-router-dom";
+import { About, Home, Vans } from "./pages";
+import { Routes, Route } from "react-router-dom";
 import { Footer, Navbar } from "./components";
 const App = () => {
   return (
@@ -8,6 +8,7 @@ const App = () => {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/vans" element={<Vans />} />
       </Routes>
       <Footer />
     </>

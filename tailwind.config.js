@@ -10,6 +10,11 @@ export default {
         "hero-pattern": "url('./src/assets/images/home-hero.png')",
         "footer-texture": "url('/img/footer-texture.png')",
       },
+      screens:{
+        fsm:"318px",
+        vvs:"400px",
+        vsm:"530px"
+      }
     },
   },
   plugins: [],
