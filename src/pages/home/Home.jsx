@@ -1,4 +1,3 @@
-import homeHero from "../../assets/images/home-hero.png";
 import { Button } from "../../components";
 const Home = () => {
   return (
@@ -18,9 +17,8 @@ const Home = () => {
             <p className="leading-8 py-[9px]">Find your van</p>
           </Button>
         </div>
-      </div>
-      duv
-      
+      </div>  
+          
     </div>
   );
 };

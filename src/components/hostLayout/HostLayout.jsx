@@ -1,42 +1,41 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
-const Navbar = () => {
+const HostLayout = () => {
   const activeClass = "text-[#161616] font-semibold left-5 pointer-events-none";
   const notActive =
-    "hover:underline hover:bg-slate-100 p-2 hover:underline-offset-4 hover:rounded-md";
+    "hover:underline hover:bg-slate-100 hover:underline-offset-4 hover:rounded-md";
   return (
-    <div className="flex py-9 justify-between mx-6 items-center font-inter">
-      <div className="text-2xl leading-[40px] ">
+    <div className="mt-[32px] mb-[45px] mx-[26px] font-inter">
+      <nav className="flex gap-[29px]  text-[18px] leading-6 font-medium">
         <NavLink
           className={({ isActive }) => (isActive ? activeClass : notActive)}
-          to="/"
+          end
+          to="."
         >
-          #VANLIFE
-        </NavLink>
-      </div>
-      <div className="flex gap-[13px] items-center">
-        <NavLink
-          to="/host"
-          className={({ isActive }) => (isActive ? activeClass : notActive)}
-        >
-          Host
+          Dashboard
         </NavLink>
         <NavLink
-          to="/about"
           className={({ isActive }) => (isActive ? activeClass : notActive)}
+          to="income"
         >
-          About
+          Income
         </NavLink>
-
         <NavLink
           className={({ isActive }) => (isActive ? activeClass : notActive)}
-          to="/vans"
+          to="vans"
         >
           Vans
         </NavLink>
-      </div>
+        <NavLink
+          className={({ isActive }) => (isActive ? activeClass : notActive)}
+          to="reviews"
+        >
+          Reviews
+        </NavLink>
+      </nav>
+      <Outlet />
     </div>
   );
 };
 
-export default Navbar;
+export default HostLayout;

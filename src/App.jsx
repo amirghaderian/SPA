@@ -1,16 +1,8 @@
-import { About, Home, Vans } from "./pages";
-import { Routes, Route } from "react-router-dom";
-import { Footer, Navbar } from "./components";
+import Routers from "./routes/Routers";
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />} />
-      </Routes>
-      <Footer />
+      <Routers/>
     </>
   );
 };
